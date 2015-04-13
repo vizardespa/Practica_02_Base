@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GreetingActivity"
+            android:label="@string/title_activity_greeting"></activity>
+        <activity
+            android:name=".DataListingActivity"
+            android:label="@string/title_activity_data_listing"></activity>
     </application>
 
 </manifest>
