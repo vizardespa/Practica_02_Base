@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
 
         switch (item.getItemId()) {
             case R.id.action_settings:
-
+                dataListActivity();
                 return true;
             case R.id.action_greet:
                 greetActivity();
@@ -40,6 +40,11 @@ public class MainActivity extends ActionBarActivity {
 
     private void greetActivity() {
         Intent intent = new Intent(MainActivity.this, GreetingActivity.class);
+        startActivity(intent);
+    }
+
+    private void dataListActivity() {
+        Intent intent = new Intent(MainActivity.this, DataListingActivity.class);
         startActivity(intent);
     }
 
