@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.cetys.angelarambula.android.practica_02_base.view.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GreetingActivity"
+            android:name="com.cetys.angelarambula.android.practica_02_base.view.GreetingActivity"
             android:label="@string/title_activity_greeting"></activity>
         <activity
-            android:name=".DataListingActivity"
+            android:name="com.cetys.angelarambula.android.practica_02_base.view.DataListingActivity"
             android:label="@string/title_activity_data_listing"></activity>
     </application>
 

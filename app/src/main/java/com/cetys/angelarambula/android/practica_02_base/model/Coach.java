@@ -1,4 +1,4 @@
-package com.cetys.angelarambula.android.practica_01_base.model;
+package com.cetys.angelarambula.android.practica_02_base.model;
 
 /**
  * Created by AngelArambula on 4/13/15.

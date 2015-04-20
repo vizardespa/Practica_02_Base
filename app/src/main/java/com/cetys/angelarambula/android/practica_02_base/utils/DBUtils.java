@@ -1,10 +1,10 @@
-package com.cetys.angelarambula.android.practica_01_base.utils;
+package com.cetys.angelarambula.android.practica_02_base.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.cetys.angelarambula.android.practica_01_base.model.Coach;
+import com.cetys.angelarambula.android.practica_02_base.model.Coach;
 
 /**
  * Created by AngelArambula on 4/13/15.

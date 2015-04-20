@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.cetys.angelarambula.android.practica_01_base"
+        applicationId "com.cetys.angelarambula.android.practica_02_base"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1

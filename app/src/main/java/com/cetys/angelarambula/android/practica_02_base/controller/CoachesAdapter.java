@@ -1,4 +1,4 @@
-package com.cetys.angelarambula.android.practica_01_base.controller;
+package com.cetys.angelarambula.android.practica_02_base.controller;
 
 import android.content.Context;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.cetys.angelarambula.android.practica_01_base.R;
-import com.cetys.angelarambula.android.practica_01_base.model.Coach;
+import com.cetys.angelarambula.android.practica_02_base.model.Coach;
 
 /**
  * Created by AngelArambula on 4/17/15.

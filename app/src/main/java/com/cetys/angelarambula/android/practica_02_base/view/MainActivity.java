@@ -1,10 +1,12 @@
-package com.cetys.angelarambula.android.practica_01_base;
+package com.cetys.angelarambula.android.practica_02_base.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.cetys.angelarambula.android.practica_01_base.R;
 
 
 public class MainActivity extends ActionBarActivity {

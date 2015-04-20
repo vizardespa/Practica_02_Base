@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Exercise_01_Base</string>
+    <string name="app_name">Exercise_02_Base</string>
 
-    <string name="txtTitle">Exercise 01 Menu</string>
+    <string name="txtTitle">Exercise 02 Menu</string>
     <string name="btnGreetTitle">Click me!</string>
     <string name="btnListViewTitle">Show data</string>
     <string name="action_settings">Settings</string>

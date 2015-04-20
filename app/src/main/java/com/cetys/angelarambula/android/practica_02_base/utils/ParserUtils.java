@@ -1,6 +1,6 @@
-package com.cetys.angelarambula.android.practica_01_base.utils;
+package com.cetys.angelarambula.android.practica_02_base.utils;
 
-import com.cetys.angelarambula.android.practica_01_base.model.Coach;
+import com.cetys.angelarambula.android.practica_02_base.model.Coach;
 
 import org.json.JSONArray;
 import org.json.JSONException;

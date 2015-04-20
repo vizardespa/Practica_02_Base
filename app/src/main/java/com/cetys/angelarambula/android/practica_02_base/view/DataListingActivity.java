@@ -1,11 +1,12 @@
-package com.cetys.angelarambula.android.practica_01_base;
+package com.cetys.angelarambula.android.practica_02_base.view;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.cetys.angelarambula.android.practica_01_base.controller.CoachesAdapter;
-import com.cetys.angelarambula.android.practica_01_base.model.Coach;
+import com.cetys.angelarambula.android.practica_01_base.R;
+import com.cetys.angelarambula.android.practica_02_base.controller.CoachesAdapter;
+import com.cetys.angelarambula.android.practica_02_base.model.Coach;
 
 import java.util.ArrayList;
 
