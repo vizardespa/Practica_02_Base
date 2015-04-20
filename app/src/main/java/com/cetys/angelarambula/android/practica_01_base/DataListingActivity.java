@@ -14,6 +14,7 @@ public class DataListingActivity extends Activity {
 
     ListView lstView = null;
     CoachesAdapter adapter = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
