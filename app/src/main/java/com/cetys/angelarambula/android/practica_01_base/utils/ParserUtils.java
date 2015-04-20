@@ -16,7 +16,7 @@ public class ParserUtils {
     private static final String C_TAG_ID = "id";
     private static final String C_TAG_COACHES = "coaches";
     private static final String C_TAG_NAME = "name";
-    private static final String C_TAG_TEAM = "sTeam";
+    private static final String C_TAG_TEAM = "team";
 
     private JSONArray arrJSONCoaches = null;
     private JSONParser oJSONParser;
@@ -40,6 +40,7 @@ public class ParserUtils {
             id = Integer.parseInt(jsonObject.getString(C_TAG_ID));
             name = jsonObject.getString(C_TAG_NAME);
             sTeam = jsonObject.getString(C_TAG_TEAM);
+
             arrLCoaches.add(new Coach(id, name, sTeam));
         }
 

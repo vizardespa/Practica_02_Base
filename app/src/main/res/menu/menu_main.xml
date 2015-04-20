@@ -19,4 +19,10 @@
         android:orderInCategory="2"
         android:title="@string/action_listView"
         app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/action_testing"
+        android:orderInCategory="3"
+        android:title="soy un hardcoded string"
+        app:showAsAction="withText" />
 </menu>

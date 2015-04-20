@@ -3,6 +3,8 @@ package com.cetys.angelarambula.android.practica_01_base.model;
 /**
  * Created by AngelArambula on 4/13/15.
  */
+//POJO
+//Plain Old Java Object
 public class Coach {
     private int nID;
     private String sName;
@@ -42,4 +44,7 @@ public class Coach {
         this.sTeam = sTeam;
     }
 
+    public String toString() {
+        return "POJO";
+    }
 }

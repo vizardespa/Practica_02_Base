@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.cetys.angelarambula.android.practica_01_base.model.Coach;
+
 /**
  * Created by AngelArambula on 4/13/15.
  */
@@ -16,7 +18,8 @@ public class DBUtils extends SQLiteOpenHelper {
     //Escribir query para crear la tabla de coaches
     private static final String CREATE_TABLE_COACHES_QUERY = "";
     private static final String DATABASE_NAME = "Coaches.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
+    public Coach test = new Coach();
 
     public DBUtils(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

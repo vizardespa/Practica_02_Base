@@ -32,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
                 greetActivity();
                 return true;
             case R.id.action_listView:
+                dataListActivity();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
