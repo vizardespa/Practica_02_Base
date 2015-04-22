@@ -2,47 +2,48 @@ package com.cetys.angelarambula.android.practica_02_base.utils;
 
 import android.util.Log;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 /**
  * Created by AngelArambula on 4/13/15.
  */
 public class JSONParser {
+    static InputStream is = null;
+    static JSONObject jobj = null;
+    static String json = "";
 
-    InputStream is = null;
-    JSONObject jObj = null;
-    String json = "";
-
+    //constructor
     public JSONParser() {
 
     }
 
-    public JSONObject getJSONFromUrl(String inputURL) {
-
+    public JSONObject getJSONFromUrl(String url) {
         try {
-            URL url = new URL(inputURL);
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            try {
-                is = new BufferedInputStream(urlConnection.getInputStream());
-            } finally {
-                urlConnection.disconnect();
-            }
-        } catch (UnsupportedEncodingException e) {
+            //defaultHTTPClient
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpPost httpPost = new HttpPost(url);
+
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            HttpEntity httpEntity = httpResponse.getEntity();
+            is = httpEntity.getContent();
+        } catch (UnsupportedOperationException e) {
+            e.printStackTrace();
+        } catch (ClientProtocolException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
@@ -53,15 +54,16 @@ public class JSONParser {
             is.close();
             json = sb.toString();
         } catch (Exception e) {
-            Log.e("Buffer Error", "Error converting result " + e.toString());
+            Log.e("Buffer Error", "Error converting result" + e.toString());
+
         }
 
         try {
-            jObj = new JSONObject(json);
+            jobj = new JSONObject(json);
         } catch (JSONException e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
+            Log.e("JSON Parser", "Error parsing data" + e.toString());
         }
-
-        return jObj;
+        //return JSON String
+        return jobj;
     }
 }
