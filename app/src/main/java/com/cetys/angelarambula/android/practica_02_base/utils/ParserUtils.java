@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class ParserUtils {
     private static final String C_URL = "https://dl.dropboxusercontent.com/u/12412048/nfl_coaches.json";
+    //private static final String C_URL = "https://www.dropbox.com/home/Public?preview=nfl_coaches.json";
     private static final String C_TAG_ID = "id";
     private static final String C_TAG_COACHES = "coaches";
     private static final String C_TAG_NAME = "name";

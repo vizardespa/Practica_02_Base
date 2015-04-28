@@ -60,6 +60,7 @@ public class JSONParser {
 
         try {
             jobj = new JSONObject(json);
+            //jobj = new JSONObject(json.substring(json.indexOf("{"), json.lastIndexOf("}") + 1));
         } catch (JSONException e) {
             Log.e("JSON Parser", "Error parsing data" + e.toString());
         }

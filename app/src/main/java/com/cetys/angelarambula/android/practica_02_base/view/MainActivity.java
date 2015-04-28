@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.view.View;
 
 import com.cetys.angelarambula.android.practica_01_base.R;
 
@@ -15,6 +17,16 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final Button btnListView = (Button) findViewById(R.id.btnListView);
+        btnListView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent DataListingActivityI = new Intent(MainActivity.this,DataListingActivity.class);
+                startActivity(DataListingActivityI);
+            }
+        });
+
+
     }
 
     @Override
