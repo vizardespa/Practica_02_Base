@@ -1,9 +1,15 @@
 package com.cetys.angelarambula.android.practica_02_base.view;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cetys.angelarambula.android.practica_01_base.R;
 import com.cetys.angelarambula.android.practica_02_base.controller.CoachesAdapter;
@@ -22,6 +28,7 @@ public class DataListingActivity extends Activity {
 
     ListView lstView = null;
     CoachesAdapter adapter = null;
+    ProgressDialog progressDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,9 @@ public class DataListingActivity extends Activity {
 
         lstView = (ListView) findViewById(R.id.lstList);
         adapter = new CoachesAdapter(this);
+
+        //http://www.androidhive.info/2011/10/android-listview-tutorial/
+        //No Idea how to implement this stuff ^^ :c
 
         //lstView.setAdapter(adapter);
 
@@ -58,30 +68,36 @@ public class DataListingActivity extends Activity {
         adapter.notifyDataSetChanged();
     }
 
-    public class CoachAsyncTask extends AsyncTask<String,Void,Boolean>
+    public class CoachAsyncTask extends AsyncTask<String,Void,ArrayList<Coach>>
     {
         @Override
-        protected Boolean doInBackground(String... params) {
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressDialog = ProgressDialog.show(DataListingActivity.this, "Espera", "Descargando...");
+        }
+
+        @Override
+        protected ArrayList<Coach> doInBackground(String... params) {
             try {
                 ParserUtils PU = new ParserUtils();
-                llenarDatos(PU.getCoaches());
-                return true;
+                return PU.getCoaches();
             } catch (JSONException e) {
                 e.printStackTrace();
-                return false;
+                return null;
             }
 
         }
         @Override
-        protected void onPostExecute(Boolean result) {
+        protected void onPostExecute(ArrayList<Coach> result) {
             super.onPostExecute(result);
-
-            if(result==false)
+            progressDialog.dismiss();
+            if(result==null)
             {
                 //Mensaje de error OP GG WP...TRYNDAMERE IS GOD!!!
             }
             else
             {
+                llenarDatos(result);
                 lstView.setAdapter(adapter);
             }
         }
